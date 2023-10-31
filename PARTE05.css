@@ -1,107 +1,22 @@
-body { 
+body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #ffffff; 
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
   color: rgb(0, 0, 0);
-  
 }
 
-html, body{
-  height: 100%;
-  overflow-y: hidden;
-  overflow-x: hidden;
-
-}
-
-#menu {
-  width: 250px;
-  height: 100%;
-  background-color: #3498db;
-  position: fixed;
-  left: 0;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-  color: #fff;
-  transition: all 0.3s;
-}
-
-#menu a {
-  padding: 15px 25px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #fff;
-  display: block;
-  transition: 0.4s;
-}
-
-#menu a:hover {
-  background-color: #f392eb8a;
-  transform: scale(0.9);
-}
-
-#logo {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.container {
-  padding: 20px;  
+.sobre {
+  padding: 20px;
   background-color: #fff;
-  max-width: 800px;  
-  margin-top: 50px;
-  margin-left: 450px;
+  max-width: 800px;
+  margin: 40px auto;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.516);
   text-align: center;
+  align-items: center;
 }
-
-.container-popup {
-  position: relative;
-  padding: 20px;
-  background-color: #fff;
-  max-width: 300px;
-  margin-top: -300px;
-  margin-left: 1500px;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.516);
-  text-align: center;
-  opacity: 0.0; /* Defina a opacidade inicial como muito baixa */
-  transition: opacity 0.3s; /* Adicione uma transição suave na opacidade */
-}
-
-.container-popup:hover {
-  opacity: 1; /* Aumente a opacidade para 1 (totalmente visível) quando o mouse estiver sobre ele */
-}
-
-#mascote-bit {
-  position: absolute;
-  top: 510px; 
-  left: 1480px;   
-  z-index: -1;  
-}
-
-.sobre-catalogo{
-  padding: 20px;
-  position: fixed;
-  top: 40%;
-  left: 90%;
-  transform: translate(-70%, -40%);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.516);
-  border-radius: 8px;
-  z-index: 10;
-  background-color: #fff;
-  width: 500px;
-  max-width: 80%;
-}
-
-.sobre-header{
-  padding: 10px;
-}
-
 
 h1 {
   font-size: 36px;
@@ -115,12 +30,6 @@ h2 {
   margin-top: 0;
 }
 
-h3 {
-  font-size: 28px;
-  color: palevioletred;
-  margin-top: 0;
-}
-
 p {
   font-size: 16px;
   line-height: 1.7;
@@ -128,9 +37,184 @@ p {
 }
 
 
+.main-bit {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-right: 15px;
+}
+
+.menuToggle{
+  position: absolute;
+  bottom: 120px;
+  right: 120px;
+  height: 70px;
+  width: 70px;
+  background: #fff;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  box-sizing: 0 0 10px #000;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 60px;
+}
+
+.menuToggle i{
+  font-size: 60px;
+  color: #0f0f20;
+}
+
+.bit-container {
+  height: 30px;
+  width: 30px;
+  bottom: 200px;
+  right: 30px;  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.516);
+  border-radius: 20px;
+  background: #fff;
+  overflow: hidden;
+  position: absolute ;
+  transition: .5s,height .5s, widht .5s;
+  z-index: -1;
+  
+}
+
+.menuToggle.active ~.bit-container{
+  height: 550px;
+  width: 390px;
+  z-index: 1;
+}
 
 
 
+.bit-container .top-part {
+  height: 100px;
+  background: #d4d4f7;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
+.bit-container .top-part i {
+  font-size: 40px;
+  cursor: pointer;
+}
 
+.top-part .bit-details {
+  display: flex;
+  align-items: center;
+}
 
+.bit-container .top-part .bit-details img {
+  height: 70px;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+
+  background: #fff;
+}
+
+.top-part .bit-text {
+  margin-left: 10px;
+}
+
+.bit-text h3 {
+  font-size: 17px;
+}
+
+.bit-text p {
+  font-size: 15px;
+}
+
+.bit-text span {
+  color: #ec0303;
+  font-weight: 600px;
+}
+
+.chart-section {
+  position: relative;
+  padding: 40px;
+}
+
+.left-part {
+  margin: 50px 0;
+  max-width: 260px;
+}
+
+.bit-chart {
+  display: flex;
+  align-items: center;
+}
+
+.bit-chart span{  
+  font-weight: bold;
+}
+
+.left-part img {
+  height: 60px;
+  background: #0f0f20;
+  border-radius: 50%;
+}
+
+.left-part p {
+  color: #555;
+  font-weight: 400px;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.chart-section .right-part {
+  margin: -50px 0;
+  text-align: right;
+  max-width: 260px 0;
+  float: right;
+  font-size: 14px;  
+}
+
+.chart-section .right-part p {
+  color: #fff;
+font-size: 13px;
+  background: #0f0f20;
+  padding: 8px 24px;
+  border-radius: 10px;
+}
+
+.chart-section .right-part span {
+  color: #555;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.bottom-section {
+  position: absolute;
+  bottom: 10px;
+ 
+  background: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  border-top: 2px solid rgba(0, 0, 0, .1);
+}
+
+.bottom-section i {
+  color: #555;
+  font-size: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.bottom-section input {
+  width: 80%;
+  height: 40px;
+  color: #0f0f20;
+  padding: 0 5px;
+  resize: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+}
