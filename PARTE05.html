@@ -9,20 +9,13 @@
     <link rel="stylesheet" href="PARTE05.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
-    <div id="menu">
-        <div id="logo">
-            <img src="Brasao_Governo_branco_500.png" width="150" alt="Brasão do Governo">
-        </div>
-        <nav>
-            <a href="PARTE05.html">Início</a>
-            <a href="#">Cadastro</a>
-        </nav>
-    </div>
 
-    <div class="container">
+    <div class="sobre">
 
         <h1>Inovação em Ação: Catalogando o Futuro da SESA</h1>
         <p>No coração da Secretaria de Estado da Saúde (SESA), o progresso tecnológico e a eficiência operacional
@@ -52,32 +45,56 @@
             colaboradores a contribuir ativamente para a manutenção desses registros.</p>
     </div>
 
-
-
-    <img id="mascote-bit" src="Mascote_frente_sem_fundo.png" alt="">
-
-
-    <div class="container-popup">
-        <h3>Olá</h3>
-        <p>Olá, eu sou o Bit, e estou à disposição para esclarecer suas dúvidas sobre como utilizar o nosso catálogo de
-            sistemas.</p>
-        <button>Sobre o Catálogo</button>
-        <button>Sobre a Consulta</button>
+    <div class="main-bit">
+        <div class="menuToggle">
+            <i class='bx bx-help-circle' ></i>
+        </div>
+        <div class="bit-container">
+            <div class="top-part">
+                <div class="bit-details">
+                    <img src="Mascote_frente_sem_fundo.png" alt="asdas">
+                    <div class="bit-text">
+                        <h3>.Bit</h3>
+                   
+                    </div>
+                </div>                              
+                <i class='bx bx-x'></i>                
+            </div>
+            <div class="chart-section">
+                <div class="left-part">
+                   <div class="bit-chart">
+                    <img src="Mascote_frente_sem_fundo.png" alt="asdad">
+                    <p>Olá, sobre o que você gostaria de saber mais sobre nosso sistema? Responda: <span>Catálogo de Sistemas</span> ou <span>Catalogar Sistemas</span>, <span>Exportar para Excel</span>.</p>
+                   </div>
+                </div>
+                <div class="right-part">
+                    <p>Olá</p>
+                    <span>Visto</span>
+                </div>
+            </div>
+            <div class="bottom-section">
+                <input type="text" id="user-input" placeholder="Digite uma mensagem..." />
+                <i class='bx bxs-send' ></i>
+            </div>
+        </div>
     </div>
 
-    <div class="sobre-catalogo" id="sobre-catalogo">
-        <div class="sobre-header">
-        <div class="title">Exemplo</div>
-        <button class="close-button">&times;</button>
 
-        </div>
-        <div class="sobre-body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptatem ullam facere error illum hic,
-            corrupti dicta dolor nemo provident unde iusto distinctio quibusdam sapiente? Et error vero sequi eaque?
-        </div>
-    </div>
-    <div class="overlay"></div>
 
+
+<script>
+
+const menuToggle=document.querySelector('.menuToggle');
+menuToggle.onclick = function()
+{
+    menuToggle.classList.toggle('active')
+    
+}
+
+
+
+</script>
+<script src="script.js"></script>
 
 
 
