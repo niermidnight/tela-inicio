@@ -2,102 +2,88 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
-    <link rel="stylesheet" href="PARTE05.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Início</title>
+  <link rel="stylesheet" href="PARTE05.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
 
 </head>
 
-<body>
+<body class="show-chatbot">
+  <div class="sobre">
+    <h1>Inovação em Ação: Catalogando o Futuro da SESA</h1>
+    <p>
+      No coração da Secretaria de Estado da Saúde (SESA), o progresso
+      tecnológico e a eficiência operacional estão na vanguarda de nosso
+      compromisso com a qualidade do atendimento e a melhoria da saúde da
+      população. Em nossa busca contínua por inovação e otimização, estamos
+      orgulhosos de apresentar o nosso "Catálogo de Sistemas", uma ferramenta
+      que transformará a maneira como gerenciamos e acessamos informações
+      vitais.
+    </p>
+    <br />
+    <h2>Premissa</h2>
+    <p>
+      Este site foi desenvolvido sob a premissa de facilitar a vida de nossos
+      profissionais e aprimorar nossa capacidade de prestação de serviços de
+      saúde. O Catálogo de Sistemas não é apenas uma lista estática de
+      sistemas utilizados pela SESA; é uma plataforma dinâmica que simplifica
+      o acesso e a gestão de dados, além de fornecer uma funcionalidade única
+      e poderosa: a geração de planilhas Excel a partir dos dados contidos no
+      catálogo. Imagine a facilidade de encontrar e explorar informações
+      detalhadas sobre todos os sistemas em uso na SESA, desde suas descrições
+      e finalidades até as equipes responsáveis e atualizações mais recentes.
+      Com nosso catálogo, você terá acesso imediato a um vasto repositório de
+      dados, tudo em um único local, simplificando a tomada de decisões
+      informadas e agilizando nossos processos.
+    </p>
+    <br />
+    <h2>Funcionalidades</h2>
+    <p>
+      Além disso, o nosso Catálogo de Sistemas permite que você edite e
+      atualize os dados diretamente na plataforma, garantindo que as
+      informações estejam sempre precisas e atualizadas. Não apenas
+      proporcionamos a transparência e a acessibilidade de informações, mas
+      também capacitamos nossos colaboradores a contribuir ativamente para a
+      manutenção desses registros.
+    </p>
+  </div>
+<button class="chatbot-toggler"><span class="material-symbols-outlined">mode_comment</span>
+  <span class="material-symbols-outlined">close</span></button>
 
-    <div class="sobre">
+  <div class="chatbot">
 
-        <h1>Inovação em Ação: Catalogando o Futuro da SESA</h1>
-        <p>No coração da Secretaria de Estado da Saúde (SESA), o progresso tecnológico e a eficiência operacional
-            estão na vanguarda de nosso compromisso com a qualidade do atendimento e a melhoria da saúde da
-            população. Em nossa busca contínua por inovação e otimização, estamos orgulhosos de apresentar o nosso
-            "Catálogo de Sistemas", uma ferramenta que transformará a maneira como
-            gerenciamos e acessamos informações vitais.
+    <header>
+      <h2>Chatbot</h2>
+      <span class="material-symbols-outlined">close</span></button>
+    </header>
 
+    <ul class="chatbox">
+      <li class="chat incoming">
+        <span class="material-symbols-outlined">smart_toy</span>
+        <p>Olá 👋 <br><br> Sobre o que você gostaria de saber mais?<br><br>
+        1 - Lorem ipsum dolor sit. <br>
+        2 - Lorem ipsum dolor sit. <br>
+        3 - Lorem ipsum dolor sit. <br>
         </p>
-        <br>
-        <h2>Premissa</h2>
-        <p>Este site foi desenvolvido sob a premissa de facilitar a vida de nossos profissionais e
-            aprimorar nossa capacidade de prestação de serviços de saúde. O Catálogo de Sistemas
-            não é apenas uma lista estática de sistemas utilizados pela SESA; é uma plataforma dinâmica que
-            simplifica o acesso e a gestão de dados, além de fornecer uma funcionalidade única e poderosa: a geração
-            de planilhas Excel a partir dos dados contidos no catálogo.
 
-            Imagine a facilidade de encontrar e explorar informações detalhadas sobre todos os sistemas em uso na
-            SESA, desde suas descrições e finalidades até as equipes responsáveis e atualizações mais recentes. Com
-            nosso catálogo, você terá acesso imediato a um vasto repositório de dados, tudo em um único local,
-            simplificando a tomada de decisões informadas e agilizando nossos processos.</p>
-        <br>
-        <h2>Funcionalidades</h2>
-        <p>Além disso, o nosso Catálogo de Sistemas permite que você edite e atualize os dados
-            diretamente na plataforma, garantindo que as informações estejam sempre precisas e atualizadas. Não
-            apenas proporcionamos a transparência e a acessibilidade de informações, mas também capacitamos nossos
-            colaboradores a contribuir ativamente para a manutenção desses registros.</p>
+
+      </li>
+   
+     
+    </ul>
+    <div class="chat-input">
+      <textarea placeholder="Digite aqui..." required></textarea>
+      <span id="send-btn" class="material-symbols-outlined">send</span>
     </div>
-
-    <div class="main-bit">
-        <div class="menuToggle">
-            <i class='bx bx-help-circle' ></i>
-        </div>
-        <div class="bit-container">
-            <div class="top-part">
-                <div class="bit-details">
-                    <img src="Mascote_frente_sem_fundo.png" alt="asdas">
-                    <div class="bit-text">
-                        <h3>.Bit</h3>
-                   
-                    </div>
-                </div>                              
-                <i class='bx bx-x'></i>                
-            </div>
-            <div class="chart-section">
-                <div class="left-part">
-                   <div class="bit-chart">
-                    <img src="Mascote_frente_sem_fundo.png" alt="asdad">
-                    <p>Olá, sobre o que você gostaria de saber mais sobre nosso sistema? Responda: <span>Catálogo de Sistemas</span> ou <span>Catalogar Sistemas</span>, <span>Exportar para Excel</span>.</p>
-                   </div>
-                </div>
-                <div class="right-part">
-                    <p>Olá</p>
-                    <span>Visto</span>
-                </div>
-            </div>
-            <div class="bottom-section">
-                <input type="text" id="user-input" placeholder="Digite uma mensagem..." />
-                <i class='bx bxs-send' ></i>
-            </div>
-        </div>
-    </div>
-
-
-
-
-<script>
-
-const menuToggle=document.querySelector('.menuToggle');
-menuToggle.onclick = function()
-{
-    menuToggle.classList.toggle('active')
-    
-}
-
-
-
-</script>
-<script src="script.js"></script>
-
-
-
-
+  </div>
+<script src="script.js" defer></script>
 
 </body>
+
+</html>
