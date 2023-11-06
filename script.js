@@ -44,13 +44,27 @@ const handleChat = () => {
 const getBotResponse = (userMessage) => {
   switch (userMessage) {
     case "0":
-      return " Escolha uma das opções: <br><br>1 - Catalogar Sistemas "
+      return ""
     case "1":
-      return "Você escolheu Catalogar Sistemas.<br><br>5 - Como Catalogar um novo Sistema.<br><br>";
+      return "Você escolheu Catalogar Sistemas:<br><br>4 - Para saber como adicionar um novo sistema ao catálogo. <br><br>0 - Para retornar as opções iniciais.<br>";
     case "2":
       return "Você escolheu Consultar Sistemas.<br><br><br><br>";
     case "3":
       return "Você escolheu Exportar para o Excel.<br><br><br>";
+      case "4":
+        return "Sistema em atualização..."
+        case "5":
+        return "Sistema em atualização..."
+        case "6":
+        return "Sistema em atualização..."
+        case "7":
+        return "Sistema em atualização..."
+        case "8":
+        return "Sistema em atualização..."
+        case "9":
+        return "Sistema em atualização..."
+        case "10":
+        return "Sistema em atualização..."
     default:
       return "Desculpe, não entendi. Por favor, escolha uma das opções citadas." ;
       chatbox.scrollTo(0, chatbox.scrollHeight);
@@ -61,8 +75,9 @@ const getBotResponse = (userMessage) => {
 
 
 
-chatbotToggler.addEventListener("click", () =>document.body.classList.toggle("show-chatbot"));
+
 sendChatBtn.addEventListener("click", handleChat);
+chatbotToggler.addEventListener("click", () =>document.body.classList.toggle("show-chatbot"));
 chatInput.addEventListener("keydown", (event) => {
   if (event.key === "Enter" && !event.shiftKey) {
     event.preventDefault();
