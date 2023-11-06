@@ -36,6 +36,9 @@ const handleChat = () => {
   setTimeout(() => {
     const botResponse = getBotResponse(userMessage);
     thinkingLi.innerHTML = `<span class="material-symbols-outlined">smart_toy</span><p>${botResponse}</p>`;
+
+    // Mova o scrollTo para o final do chatbox após adicionar a resposta do bot.
+    chatbox.scrollTo(0, chatbox.scrollHeight);
   }, 1200);
 
   chatInput.value = "";
@@ -44,7 +47,7 @@ const handleChat = () => {
 const getBotResponse = (userMessage) => {
   switch (userMessage) {
     case "0":
-      return ""
+      return "1 - Catalogar Sistemas <br><br> 2 - Consultar Sistemas <br><br>  3 - Exportar para o Excel <br>"
     case "1":
       return "Você escolheu Catalogar Sistemas:<br><br>4 - Para saber como adicionar um novo sistema ao catálogo. <br><br>0 - Para retornar as opções iniciais.<br>";
     case "2":
@@ -65,12 +68,14 @@ const getBotResponse = (userMessage) => {
         return "Sistema em atualização..."
         case "10":
         return "Sistema em atualização..."
+        case "11":
+          return "Sistema em atualizaçasdasdasdasdasfasfasfas<br>fasfasfs<br>afasfasfasfasfasfasfasfasf<br>asfasfasfasfasfasfasão..."
     default:
       return "Desculpe, não entendi. Por favor, escolha uma das opções citadas." ;
-      chatbox.scrollTo(0, chatbox.scrollHeight);
+     
     
   }
-
+  
 }
 
 
