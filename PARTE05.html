@@ -14,7 +14,7 @@
 
 </head>
 
-<body class="show-chatbot">
+<body>
   <div class="sobre">
     <h1>Inovação em Ação: Catalogando o Futuro da SESA</h1>
     <p>
@@ -37,7 +37,7 @@
       e poderosa: a geração de planilhas Excel a partir dos dados contidos no
       catálogo. Imagine a facilidade de encontrar e explorar informações
       detalhadas sobre todos os sistemas em uso na SESA, desde suas descrições
-      e finalidades até as equipes responsáveis e atualizações mais recentes.
+      e finalidades até seus responsáveis e atualizações mais recentes.
       Com nosso catálogo, você terá acesso imediato a um vasto repositório de
       dados, tudo em um único local, simplificando a tomada de decisões
       informadas e agilizando nossos processos.
@@ -53,7 +53,8 @@
       manutenção desses registros.
     </p>
   </div>
-<button class="chatbot-toggler"><span class="material-symbols-outlined">mode_comment</span>
+<button class="chatbot-toggler">
+  <span class="material-symbols-outlined">mode_comment</span>
   <span class="material-symbols-outlined"></span></button>
 
   <div class="chatbot">
@@ -86,7 +87,7 @@
      
     </ul>
     <div class="chat-input">
-      <textarea placeholder="Digite aqui..." required maxlength="30" oninput="this.value = this.value.replace(/[^0-9]/g, '')"></textarea>
+      <textarea placeholder="Digite aqui..." required maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '')"></textarea>
       <span id="send-btn" class="material-symbols-outlined">send</span>
     </div>
   </div>
