@@ -54,31 +54,39 @@
     </p>
   </div>
 <button class="chatbot-toggler"><span class="material-symbols-outlined">mode_comment</span>
-  <span class="material-symbols-outlined">close</span></button>
+  <span class="material-symbols-outlined"></span></button>
 
   <div class="chatbot">
 
     <header>
       <h2>Chatbot</h2>
-      <span class="material-symbols-outlined">close</span></button>
+      <span class="material-symbols-outlined"></span></button>
     </header>
 
     <ul class="chatbox">
       <li class="chat incoming">
         <span class="material-symbols-outlined">smart_toy</span>
-        <p>Olá 👋 <br><br> Sobre o que você gostaria de saber mais?<br><br>
-        1 - Lorem ipsum dolor sit. <br>
-        2 - Lorem ipsum dolor sit. <br>
-        3 - Lorem ipsum dolor sit. <br>
+        <p>Olá 👋 eu sou Bit. <br><br> Vou ajudar a tirar suas dúvidas sobre o nosso Catálogo de Sistemas.<br><br>
+          Escolha uma das opções:
         </p>
 
 
+      </li>
+      <li class="chat incoming">
+        <span class="material-symbols-outlined">smart_toy</span>
+        <p>1 - Catalogar Sistemas <br><br>
+          2 - Consultar Sistemas <br><br>
+          3 - Exportar para o Excel <br>
+        </p>
+      </li>
+      <li class="chat outgoing">
+       
       </li>
    
      
     </ul>
     <div class="chat-input">
-      <textarea placeholder="Digite aqui..." required></textarea>
+      <textarea placeholder="Digite aqui..." required maxlength="30" oninput="this.value = this.value.replace(/[^0-9]/g, '')"></textarea>
       <span id="send-btn" class="material-symbols-outlined">send</span>
     </div>
   </div>
