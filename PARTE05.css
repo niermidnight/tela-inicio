@@ -6,6 +6,7 @@ body {
   color: rgb(0, 0, 0);
 }
 
+
 .sobre {
   padding: 20px;
   background-color: #fff;
@@ -202,6 +203,8 @@ background: #3498db;
 .chat-input textarea:valid ~ span{
   visibility: visible ;
 }
+
+
 
 @media(max-width:490px){
   .chatbot{
