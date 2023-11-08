@@ -57,25 +57,28 @@ const getBotResponse = (userMessage) => {
       return "Para consultar os sistemas catálogados, você deverá clicar em <b>Consulta</b> no menu lateral. Lá você terá acesso a todos os sistemas catálogados, e ainda contará com uma barra de pesquisa para usar da maneira que desejar.<br>";
     case "4":
       return "Para exportar os sistemas para o Excel, você deverá clicar em <b>Consulta</b> no menu lateral. Lá você terá acesso a todos os sistemas. No canto superior direito terá um botão para exportar todos os dados. Basta clicar lá que será iniciado o download de sua planilha Excel.";
-    case "Catalogar":
+      case "como catalogar um sistema":
+        return "Para registrar um novo sistema no catálogo, você deverá clicar em <b>Cadastro de Sistemas</b> no menu lateral. Após isso, será aberto um formulário, você deverá preencher todos os campos e clicar no botão ao final, e pronto, estará registrado.<br>"
+    case "como catalogar um novo sistema":
       return "Para registrar um novo sistema no catálogo, você deverá clicar em <b>Cadastro de Sistemas</b> no menu lateral. Após isso, será aberto um formulário, você deverá preencher todos os campos e clicar no botão ao final, e pronto, estará registrado.<br>";
-    case "Editar":
-      return "Sistema em atualização...";
-    case "7":
-      return "Sistema em atualização...";
-    case "8":
-      return "Sistema em atualização...";
+    case "como editar os sistemas catalogados":
+      return "Para editar um sistema já catalogado, você deverá clicar em <b>Consulta</b> no menu lateral. Lá você terá acesso aos sistemas, e à direita deles terá um botão de edição. Ao clicar nesse botão, você voltará para a parte de formulário, onde você poderá editar as informações do jeito que preferir.<br>";
+    case "como consultar os sistemas":
+      return "Para consultar os sistemas catálogados, você deverá clicar em <b>Consulta</b> no menu lateral. Lá você terá acesso a todos os sistemas catálogados, e ainda contará com uma barra de pesquisa para usar da maneira que desejar.<br>";
+    case "como exportar os sistemas para o excel":
+      return "Para exportar os sistemas para o Excel, você deverá clicar em <b>Consulta</b> no menu lateral. Lá você terá acesso a todos os sistemas. No canto superior direito terá um botão para exportar todos os dados. Basta clicar lá que será iniciado o download de sua planilha Excel.";
     case "obrigado":
       return "De nada! Estou aqui para ajudar. Se tiver mais alguma dúvida ou precisar de assistência adicional, não hesite em perguntar. Estou à disposição!";
-    case "10":
-      return "Sistema em atualização...";
+   
     default:
       return "Desculpe, não entendi. Por favor, escolha uma das opções citadas:<br><br>1 - Como Catalogar Um Novo Sistema;<br><br>2 - Como Editar os Sistemas Catalogados;<br><br>3 - Como Consultar os Sistemas;<br><br>4 - Como Exportar os Sistemas para o Excel.<br>";
   }
 };
 
 function normalizeString(str) {
-  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  return str.normalize("NFD")  .replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g, "") 
+  .replace(/\s{2,}/g, " ") 
+  .trim(); 
 }
 
 sendChatBtn.addEventListener("click", handleChat);
