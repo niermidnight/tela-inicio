@@ -57,7 +57,7 @@ const getBotResponse = (userMessage) => {
   } else {
     switch (userMessageNormalized) {
       case "0":
-        return "1 - Como Cadastrar Um Novo Sistema; <br><br>2 - Como Editar os Sistemas Catalogados; <br><br>  3 - Como Consultar os Sistemas; <br><br> 4 - Como Exportar os Sistemas para o Excel.<br>";
+        return "1 - Como Cadastrar Um Novo Sistema; <br><br>2 - Como Editar os Sistemas Catalogados; <br><br>  3 - Como Consultar os Sistemas; <br><br> 4 - Como Exportar para o Excel.<br>";
         case "1":
         return "Para cadastrar um novo sistema no catálogo, você deverá clicar em <b>Cadastro de Sistemas</b> no menu lateral. Após isso, será aberto um formulário, você deverá preencher todos os campos e clicar no botão ao final, e pronto, estará registrado.<br>";
     case "2":
@@ -69,7 +69,7 @@ const getBotResponse = (userMessage) => {
       case "obrigado":
         return "De nada! Estou aqui para ajudar. Se tiver mais alguma dúvida ou precisar de assistência adicional, não hesite em perguntar. Estou à disposição!";
       default:
-        return "Desculpe, não entendi. Por favor, escolha uma das opções citadas:<br><br>1 - Como Catalogar Um Novo Sistema;<br><br>2 - Como Editar os Sistemas Catalogados;<br><br>3 - Como Consultar os Sistemas;<br><br>4 - Como Exportar os Sistemas para o Excel.<br>";
+        return "Desculpe, não entendi. Por favor, escolha uma das opções citadas:<br><br>1 - Como Catalogar Um Novo Sistema;<br><br>2 - Como Editar os Sistemas Catalogados;<br><br>3 - Como Consultar os Sistemas;<br><br>4 - Como Exportar para o Excel.<br>";
     }
   }
 };
