@@ -69,7 +69,7 @@ const getBotResponse = (userMessage) => {
       case "obrigado":
         return "De nada! Estou aqui para ajudar. Se tiver mais alguma dúvida ou precisar de assistência adicional, não hesite em perguntar. Estou à disposição!";
       default:
-        return "Desculpe, não entendi. Por favor, escolha uma das opções citadas:<br><br>1 - Como Catalogar Um Novo Sistema;<br><br>2 - Como Editar os Sistemas Catalogados;<br><br>3 - Como Consultar os Sistemas;<br><br>4 - Como Exportar para o Excel.<br>";
+        return "Desculpe, não entendi. Por favor, escolha uma das opções citadas:<br><br>1 - Como Cadastrar Um Novo Sistema;<br><br>2 - Como Editar os Sistemas Catalogados;<br><br>3 - Como Consultar os Sistemas;<br><br>4 - Como Exportar para o Excel.<br>";
     }
   }
 };
