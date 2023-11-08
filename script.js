@@ -46,32 +46,31 @@ const handleChat = () => {
 const getBotResponse = (userMessage) => {
   const userMessageNormalized = normalizeString(userMessage).toLowerCase();
 
-  switch (userMessageNormalized) {
-    case "0":
-      return "1 - Como Catalogar Um Novo Sistema; <br><br>2 - Como Editar os Sistemas Catalogados; <br><br>  3 - Como Consultar os Sistemas; <br><br> 4 - Como Exportar os Sistemas para o Excel.<br>";
-    case "1":
-      return "Para registrar um novo sistema no catálogo, você deverá clicar em <b>Cadastro de Sistemas</b> no menu lateral. Após isso, será aberto um formulário, você deverá preencher todos os campos e clicar no botão ao final, e pronto, estará registrado.<br>";
+  if (userMessageNormalized.includes("catalogar")) {
+    return "Para catalogar um novo sistema, você deve clicar em <b>Cadastro de Sistemas</b> no menu lateral. Após isso, preencha todos os campos no formulário e clique no botão ao final para registrá-lo.";
+  } else if (userMessageNormalized.includes("editar")) {
+    return "Para editar um sistema já catalogado, clique em <b>Consulta</b> no menu lateral. Você terá acesso aos sistemas e um botão de edição estará à direita deles. Clique nesse botão para editar as informações.";
+  } else if (userMessageNormalized.includes("consultar,")) {
+    return "Para consultar os sistemas catalogados, clique em <b>Consulta</b> no menu lateral. Lá você terá acesso a todos os sistemas e uma barra de pesquisa para usar como desejar.";
+  } else if (userMessageNormalized.includes("exportar") || userMessageNormalized.includes("excel")) {
+    return "Para exportar os sistemas para o Excel, clique em <b>Consulta</b> no menu lateral. Lá você terá acesso a todos os sistemas. No canto superior direito, você encontrará um botão para exportar todos os dados. Clique nele para iniciar o download de sua planilha Excel.";
+  } else {
+    switch (userMessageNormalized) {
+      case "0":
+        return "1 - Como Catalogar Um Novo Sistema; <br><br>2 - Como Editar os Sistemas Catalogados; <br><br>  3 - Como Consultar os Sistemas; <br><br> 4 - Como Exportar os Sistemas para o Excel.<br>";
+        case "1":
+        return "Para registrar um novo sistema no catálogo, você deverá clicar em <b>Cadastro de Sistemas</b> no menu lateral. Após isso, será aberto um formulário, você deverá preencher todos os campos e clicar no botão ao final, e pronto, estará registrado.<br>";
     case "2":
-      return "Para editar um sistema já catalogado, você deverá clicar em <b>Consulta</b> no menu lateral. Lá você terá acesso aos sistemas, e à direita deles terá um botão de edição. Ao clicar nesse botão, você voltará para a parte de formulário, onde você poderá editar as informações do jeito que preferir.<br>";
+        return "Para editar um sistema já catalogado, você deverá clicar em <b>Consulta</b> no menu lateral. Lá você terá acesso aos sistemas, e à direita deles terá um botão de edição. Ao clicar nesse botão, você voltará para a parte de formulário, onde você poderá editar as informações do jeito que preferir.<br>";
     case "3":
-      return "Para consultar os sistemas catálogados, você deverá clicar em <b>Consulta</b> no menu lateral. Lá você terá acesso a todos os sistemas catálogados, e ainda contará com uma barra de pesquisa para usar da maneira que desejar.<br>";
+        return "Para consultar os sistemas catálogados, você deverá clicar em <b>Consulta</b> no menu lateral. Lá você terá acesso a todos os sistemas catálogados, e ainda contará com uma barra de pesquisa para usar da maneira que desejar.<br>";
     case "4":
       return "Para exportar os sistemas para o Excel, você deverá clicar em <b>Consulta</b> no menu lateral. Lá você terá acesso a todos os sistemas. No canto superior direito terá um botão para exportar todos os dados. Basta clicar lá que será iniciado o download de sua planilha Excel.";
-      case "como catalogar um sistema":
-        return "Para registrar um novo sistema no catálogo, você deverá clicar em <b>Cadastro de Sistemas</b> no menu lateral. Após isso, será aberto um formulário, você deverá preencher todos os campos e clicar no botão ao final, e pronto, estará registrado.<br>"
-    case "como catalogar um novo sistema":
-      return "Para registrar um novo sistema no catálogo, você deverá clicar em <b>Cadastro de Sistemas</b> no menu lateral. Após isso, será aberto um formulário, você deverá preencher todos os campos e clicar no botão ao final, e pronto, estará registrado.<br>";
-    case "como editar os sistemas catalogados":
-      return "Para editar um sistema já catalogado, você deverá clicar em <b>Consulta</b> no menu lateral. Lá você terá acesso aos sistemas, e à direita deles terá um botão de edição. Ao clicar nesse botão, você voltará para a parte de formulário, onde você poderá editar as informações do jeito que preferir.<br>";
-    case "como consultar os sistemas":
-      return "Para consultar os sistemas catálogados, você deverá clicar em <b>Consulta</b> no menu lateral. Lá você terá acesso a todos os sistemas catálogados, e ainda contará com uma barra de pesquisa para usar da maneira que desejar.<br>";
-    case "como exportar os sistemas para o excel":
-      return "Para exportar os sistemas para o Excel, você deverá clicar em <b>Consulta</b> no menu lateral. Lá você terá acesso a todos os sistemas. No canto superior direito terá um botão para exportar todos os dados. Basta clicar lá que será iniciado o download de sua planilha Excel.";
-    case "obrigado":
-      return "De nada! Estou aqui para ajudar. Se tiver mais alguma dúvida ou precisar de assistência adicional, não hesite em perguntar. Estou à disposição!";
-   
-    default:
-      return "Desculpe, não entendi. Por favor, escolha uma das opções citadas:<br><br>1 - Como Catalogar Um Novo Sistema;<br><br>2 - Como Editar os Sistemas Catalogados;<br><br>3 - Como Consultar os Sistemas;<br><br>4 - Como Exportar os Sistemas para o Excel.<br>";
+      case "obrigado":
+        return "De nada! Estou aqui para ajudar. Se tiver mais alguma dúvida ou precisar de assistência adicional, não hesite em perguntar. Estou à disposição!";
+      default:
+        return "Desculpe, não entendi. Por favor, escolha uma das opções citadas:<br><br>1 - Como Catalogar Um Novo Sistema;<br><br>2 - Como Editar os Sistemas Catalogados;<br><br>3 - Como Consultar os Sistemas;<br><br>4 - Como Exportar os Sistemas para o Excel.<br>";
+    }
   }
 };
 
